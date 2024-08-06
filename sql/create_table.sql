@@ -1,6 +1,6 @@
 # 数据库初始化
-# @author <a href="https://github.com/lidj">程序员鱼皮</a>
-# @from <a href="https://dj.icu">编程导航知识星球</a>
+# xoj BY DJ
+# 2024/8/3
 
 -- 创建库
 create database if not exists my_db;

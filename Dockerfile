@@ -1,6 +1,6 @@
 # Docker 镜像构建
-# @author <a href="https://github.com/lidj">程序员鱼皮</a>
-# @from <a href="https://dj.icu">编程导航知识星球</a>
+# xoj BY DJ
+# 2024/8/3
 FROM maven:3.8.1-jdk-8-slim as builder
 
 # Copy local code to the container image.

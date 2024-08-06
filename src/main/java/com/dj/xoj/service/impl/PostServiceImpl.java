@@ -49,8 +49,8 @@ import org.springframework.stereotype.Service;
 /**
  * 帖子服务实现
  *
- * @author <a href="https://github.com/lidj">程序员鱼皮</a>
- * @from <a href="https://dj.icu">编程导航知识星球</a>
+ * xoj BY DJ
+ * 2024/8/3
  */
 @Service
 @Slf4j

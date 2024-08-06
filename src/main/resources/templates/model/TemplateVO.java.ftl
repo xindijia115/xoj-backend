@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * ${dataName}视图
  *
- * @author <a href="https://github.com/lidj">程序员鱼皮</a>
+ * xoj BY DJ
  * @from <a href="https://www.code-nav.cn">编程导航学习圈</a>
  */
 @Data

@@ -11,10 +11,12 @@ import com.dj.xoj.constant.UserConstant;
 import com.dj.xoj.exception.BusinessException;
 import com.dj.xoj.exception.ThrowUtils;
 import com.dj.xoj.model.dto.question.*;
+import com.dj.xoj.model.dto.questionsubmit.QuestionSubmitAddRequest;
 import com.dj.xoj.model.entity.Question;
 import com.dj.xoj.model.entity.User;
 import com.dj.xoj.model.vo.QuestionVO;
 import com.dj.xoj.service.QuestionService;
+import com.dj.xoj.service.QuestionSubmitService;
 import com.dj.xoj.service.UserService;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -41,6 +43,9 @@ public class QuestionController {
 
     @Resource
     private UserService userService;
+
+    @Resource
+    private QuestionSubmitService questionSubmitService;
 
     // region 增删改查
 
@@ -159,6 +164,25 @@ public class QuestionController {
         }
         return ResultUtils.success(QuestionService.getQuestionVO(Question, request));
     }
+
+    /**
+     * 题目提交
+     * @param questionSubmitAddRequest
+     * @param request
+     * @return
+     */
+    @PostMapping("/question_submit/do")
+    public BaseResponse<Long> doQuestionSubmit(@RequestBody QuestionSubmitAddRequest questionSubmitAddRequest,
+                                               HttpServletRequest request) {
+        if (questionSubmitAddRequest == null || questionSubmitAddRequest.getQuestionId() <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        // 登录才能点赞
+        final User loginUser = userService.getLoginUser(request);
+        long questionSubmitId = questionSubmitService.doQuestionSubmit(questionSubmitAddRequest, loginUser);
+        return ResultUtils.success(questionSubmitId);
+    }
+
 
     /**
      * 分页获取题目列表（仅管理员）

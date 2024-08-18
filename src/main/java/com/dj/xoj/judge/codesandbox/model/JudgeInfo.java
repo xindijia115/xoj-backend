@@ -1,4 +1,4 @@
-package com.dj.xoj.model.dto.questionsubmit;
+package com.dj.xoj.judge.codesandbox.model;
 
 import lombok.Data;
 
@@ -17,10 +17,10 @@ public class JudgeInfo {
     /**
      * 消耗内存(kb)
      */
-    private String memory;
+    private Long memory;
 
     /**
      * 消耗时间(ms)
      */
-    private String time;
+    private Long time;
 }

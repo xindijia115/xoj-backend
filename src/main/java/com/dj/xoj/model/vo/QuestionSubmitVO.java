@@ -1,17 +1,13 @@
 package com.dj.xoj.model.vo;
 
 import cn.hutool.json.JSONUtil;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.dj.xoj.model.dto.question.JudgeConfig;
-import com.dj.xoj.model.dto.questionsubmit.JudgeInfo;
-import com.dj.xoj.model.entity.Question;
+import com.dj.xoj.judge.codesandbox.model.JudgeInfo;
 import com.dj.xoj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * 提交题目记录

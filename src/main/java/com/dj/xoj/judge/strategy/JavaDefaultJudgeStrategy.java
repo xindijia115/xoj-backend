@@ -8,6 +8,7 @@ import com.dj.xoj.model.entity.Question;
 import com.dj.xoj.model.enums.JudgeInfoMessageEnum;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author: xia
@@ -25,8 +26,8 @@ public class JavaDefaultJudgeStrategy implements JudgeStrategy {
         JudgeInfoMessageEnum judgeInfoMessageEnum = JudgeInfoMessageEnum.ACCEPTED;
         JudgeInfo judgeInfoResponse = new JudgeInfo();
 
-        Long memory = judgeInfo.getMemory();
-        Long time = judgeInfo.getTime();
+        Long memory = Optional.ofNullable(judgeInfo.getMemory()).orElse(0L);
+        Long time = Optional.ofNullable(judgeInfo.getTime()).orElse(0L);
         judgeInfoResponse.setMemory(memory);
         judgeInfoResponse.setTime(time);
 

@@ -10,7 +10,7 @@ import com.dj.xoj.judge.codesandbox.impl.ThirdPartyCodeSandBox;
 /**
  * @author: xia
  * @date: 2024-08-17  20:34
- * @description:代码沙箱工厂,根据用户设置的字符串参数来决定使用哪一种代码沙箱
+ * @description:代码沙箱工厂,根据开发者设置的字符串参数来决定使用哪一种代码沙箱
  */
 public class CodeSandBoxFactory {
 

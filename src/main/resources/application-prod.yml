@@ -12,10 +12,10 @@ spring:
   # todo 需替换配置
   redis:
     database: 7
-    host: 111.230.198.4
+    host: 
     port: 6379
     timeout: 5000
-    password: xindijia_@
+    password: 
   # Elasticsearch 配置
   # todo 需替换配置
   elasticsearch:
